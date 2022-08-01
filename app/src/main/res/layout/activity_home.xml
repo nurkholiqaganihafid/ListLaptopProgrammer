@@ -6,6 +6,30 @@
     android:layout_height="match_parent"
     tools:context=".HomeActivity">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:menu="@menu/btn_about_menu">
+
+        <TextView
+            style="@style/titleBarLayoutFontStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bar_title" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <View
+        android:id="@+id/border_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:alpha="0.1"
+        android:background="@color/black"
+        app:layout_constraintTop_toBottomOf="@+id/bar_layout" />
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

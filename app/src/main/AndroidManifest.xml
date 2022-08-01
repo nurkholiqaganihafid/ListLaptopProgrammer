@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.nurkholiq.listlaptopprogrammer">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -13,6 +15,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ListLaptopProgrammer"
         tools:targetApi="31">
+        <activity
+            android:name=".WebSocialMediaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AuthorActivity"
+            android:exported="false" />
         <activity
             android:name=".HomeActivity"
             android:exported="false" />
