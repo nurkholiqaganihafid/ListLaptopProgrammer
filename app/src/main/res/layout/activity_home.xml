@@ -16,7 +16,7 @@
         app:menu="@menu/btn_about_menu">
 
         <TextView
-            style="@style/titleBarLayoutFontStyle"
+            style="@style/TitleBarLayoutFontStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/bar_title" />
@@ -33,7 +33,7 @@
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="65dp"
+        android:layout_marginTop="58dp"
         android:layout_marginBottom="4dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -47,10 +47,10 @@
 
             <View
                 android:id="@+id/line_programmer"
-                style="@style/productLineFontStyle" />
+                style="@style/ProductLineFontStyle" />
 
             <TextView
-                style="@style/productNameFontStyle"
+                style="@style/ProductNameFontStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/list_laptop_programmer" />
@@ -67,10 +67,10 @@
 
             <View
                 android:id="@+id/line_gaming"
-                style="@style/productLineFontStyle.second" />
+                style="@style/ProductLineFontStyle.Second" />
 
             <TextView
-                style="@style/productNameFontStyle"
+                style="@style/ProductNameFontStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/list_laptop_gaming" />
@@ -87,10 +87,10 @@
 
             <View
                 android:id="@+id/line_recommendation"
-                style="@style/productLineFontStyle.second" />
+                style="@style/ProductLineFontStyle.Second" />
 
             <TextView
-                style="@style/productNameFontStyle"
+                style="@style/ProductNameFontStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/laptop_rekomendasi_2022" />

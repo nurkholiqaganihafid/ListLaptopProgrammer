@@ -14,4 +14,8 @@
     <string name="price">Rp5.000.000</string>
     <string name="list_laptop_gaming">LAPTOP GAMING</string>
     <string name="laptop_rekomendasi_2022">LAPTOP REKOMENDASI 2022</string>
+    <string name="deskripsi">Deskripsi</string>
+    <string name="title_desc_item">Asus Zenbook Pro Duo UX482EG i7 1165G7</string>
+    <string name="rincian_produk">Rincian Produk</string>
+    <string name="layar_desc">14” (16:9) LED-backlit FHD (1920 x 1080) 60 Hz touchscreen</string>
 </resources>

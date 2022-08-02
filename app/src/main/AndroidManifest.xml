@@ -16,6 +16,9 @@
         android:theme="@style/Theme.ListLaptopProgrammer"
         tools:targetApi="31">
         <activity
+            android:name=".DescriptionActivity"
+            android:exported="false" />
+        <activity
             android:name=".WebSocialMediaActivity"
             android:exported="false" />
         <activity

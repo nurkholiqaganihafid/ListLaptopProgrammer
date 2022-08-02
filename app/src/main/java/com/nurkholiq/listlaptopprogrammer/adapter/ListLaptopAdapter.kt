@@ -6,10 +6,10 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
+import com.nurkholiq.listlaptopprogrammer.DescriptionActivity
 import com.nurkholiq.listlaptopprogrammer.R
 import com.nurkholiq.listlaptopprogrammer.model.Laptop
 
@@ -19,8 +19,6 @@ class ListLaptopAdapter(private val listLaptop: ArrayList<Laptop>, val value: St
     inner class ListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         var tvBrandName: TextView = itemView.findViewById(R.id.tv_brand)
         var tvPrice: TextView = itemView.findViewById(R.id.tv_price)
-
-        //        var tvBrandName: TextView = itemView.findViewById(R.id.tv_brand)
         var imgFoto: ImageView = itemView.findViewById(R.id.img_item_photo)
 
     }
@@ -61,11 +59,20 @@ class ListLaptopAdapter(private val listLaptop: ArrayList<Laptop>, val value: St
         holder.tvPrice.text = laptop.price
 
         holder.itemView.setOnClickListener {
-            Toast.makeText(
-                content,
-                "Product not available " + listLaptop[position].brandName,
-                Toast.LENGTH_SHORT
-            ).show()
+            val moveIntentDesc = Intent(content, DescriptionActivity::class.java)
+            moveIntentDesc.putExtra(DescriptionActivity.LAPTOP_IMAGE, laptop.image)
+            moveIntentDesc.putExtra(DescriptionActivity.LAPTOP_BRAND, laptop.brandName)
+            moveIntentDesc.putExtra(DescriptionActivity.LAPTOP_PRICE, laptop.price)
+            moveIntentDesc.putExtra(DescriptionActivity.LAPTOP_SCREEN, laptop.screen)
+            moveIntentDesc.putExtra(DescriptionActivity.LAPTOP_PROCESSOR, laptop.processor)
+            moveIntentDesc.putExtra(DescriptionActivity.LAPTOP_GRAPHIC, laptop.graphic)
+            moveIntentDesc.putExtra(DescriptionActivity.LAPTOP_RAM, laptop.ram)
+            moveIntentDesc.putExtra(DescriptionActivity.LAPTOP_STORAGE, laptop.storage)
+            moveIntentDesc.putExtra(DescriptionActivity.LAPTOP_BATTERY, laptop.battery)
+            moveIntentDesc.putExtra(DescriptionActivity.URL_SHOPEE, laptop.shopeeLink)
+            moveIntentDesc.putExtra(DescriptionActivity.URL_LAZADA, laptop.lazadaLink)
+            moveIntentDesc.putExtra(DescriptionActivity.LAPTOP_DESC, laptop.detail)
+            content.startActivity(moveIntentDesc)
         }
     }
 

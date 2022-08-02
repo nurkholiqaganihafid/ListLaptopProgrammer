@@ -33,7 +33,7 @@
 
             <TextView
                 android:id="@+id/tv_brand"
-                style="@style/brandFontStyle"
+                style="@style/BrandFontStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignTop="@id/line_item"
@@ -41,7 +41,7 @@
 
             <TextView
                 android:id="@+id/tv_price"
-                style="@style/priceFontStyle"
+                style="@style/PriceFontStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
