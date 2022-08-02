@@ -6,8 +6,17 @@ import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.nurkholiq.listlaptopprogrammer.adapter.ListLaptopAdapter
+import com.nurkholiq.listlaptopprogrammer.data.LaptopDataDummy
+import com.nurkholiq.listlaptopprogrammer.model.Laptop
 
 class HomeActivity : AppCompatActivity() {
+
+    private lateinit var rvLaptops: RecyclerView
+    private var list: ArrayList<Laptop> = arrayListOf()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
@@ -19,6 +28,18 @@ class HomeActivity : AppCompatActivity() {
         toolbar.setNavigationOnClickListener {
             finish()
         }
+
+        rvLaptops = findViewById(R.id.rv_laptop_programmer)
+        rvLaptops.setHasFixedSize(true)
+
+        list.addAll(LaptopDataDummy.listLaptop)
+        showRecyclerViewList()
+    }
+
+    private fun showRecyclerViewList() {
+        rvLaptops.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+        val listLaptopAdapter = ListLaptopAdapter(list, "horizontal")
+        rvLaptops.adapter = listLaptopAdapter
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {

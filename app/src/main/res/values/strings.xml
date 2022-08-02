@@ -1,12 +1,15 @@
 <resources>
-    <string name="app_name">List Laptop Programmer</string>
+    <string name="app_name">LapGrammer</string>
     <string name="lap_grammer">Lap Grammer</string>
     <string name="about">About</string>
-    <string name="bar_title">List Laptop Programmer</string>
+    <string name="bar_title">List Laptop</string>
     <string name="author">Author</string>
     <string name="author_name">Nurkholiq Agani Hafid</string>
     <string name="email">caknurtopalanro77@gmail.com</string>
     <string name="passion">Android Developer</string>
     <string name="social_media">Media Sosial:</string>
     <string name="goal">\"We were born for a reason\"</string>
+    <string name="list_laptop_programmer">LAPTOP PROGRAMMER</string>
+    <string name="brand_laptop">Lenovo YOGA Slim 7i Carbon</string>
+    <string name="price">Rp5.000.000</string>
 </resources>

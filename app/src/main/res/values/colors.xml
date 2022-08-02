@@ -9,4 +9,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="primary">#6d614a</color>
     <color name="color_status_bar">#413722</color>
+    <color name="blue_grey_700">#455a64</color>
+    <color name="deep_orange_500">#ff5722</color>
+    <color name="grey_400">#bdbdbd</color>
 </resources>
