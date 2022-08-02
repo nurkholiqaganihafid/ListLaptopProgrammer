@@ -13,7 +13,7 @@ import com.bumptech.glide.request.RequestOptions
 import com.nurkholiq.listlaptopprogrammer.R
 import com.nurkholiq.listlaptopprogrammer.model.Laptop
 
-class ListLaptopAdapter(private val listLaptop: ArrayList<Laptop>, val orientation: String) :
+class ListLaptopAdapter(private val listLaptop: ArrayList<Laptop>, val value: String) :
     RecyclerView.Adapter<ListLaptopAdapter.ListViewHolder>() {
 
     inner class ListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -28,11 +28,23 @@ class ListLaptopAdapter(private val listLaptop: ArrayList<Laptop>, val orientati
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListViewHolder {
 
         lateinit var view: View
+        val context = parent.context
 
-        if (orientation == "horizontal") {
-            view = LayoutInflater.from(parent.context)
+        if (value == "laptop_programmer") {
+            view = LayoutInflater.from(context)
                 .inflate(R.layout.item_laptop_programmer, parent, false)
         }
+
+        if (value == "laptop_gaming") {
+            view =
+                LayoutInflater.from(context).inflate(R.layout.item_laptop_programmer, parent, false)
+        }
+
+        if (value == "laptop_recommend") {
+            view =
+                LayoutInflater.from(context).inflate(R.layout.item_laptop_recommend, parent, false)
+        }
+
         return ListViewHolder(view)
     }
 
@@ -42,7 +54,7 @@ class ListLaptopAdapter(private val listLaptop: ArrayList<Laptop>, val orientati
 
         Glide.with(content)
             .load(laptop.image)
-//            .apply(RequestOptions().override(200, 200))
+            .apply(RequestOptions().override(350, 550))
             .into(holder.imgFoto)
 
         holder.tvBrandName.text = laptop.brandName

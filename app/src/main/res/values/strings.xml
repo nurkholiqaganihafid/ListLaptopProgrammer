@@ -12,4 +12,6 @@
     <string name="list_laptop_programmer">LAPTOP PROGRAMMER</string>
     <string name="brand_laptop">Lenovo YOGA Slim 7i Carbon</string>
     <string name="price">Rp5.000.000</string>
+    <string name="list_laptop_gaming">LAPTOP GAMING</string>
+    <string name="laptop_rekomendasi_2022">LAPTOP REKOMENDASI 2022</string>
 </resources>

@@ -30,41 +30,79 @@
         android:background="@color/black"
         app:layout_constraintTop_toBottomOf="@+id/bar_layout" />
 
-    <LinearLayout
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:orientation="vertical"
-        android:padding="16dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="65dp"
+        android:layout_marginBottom="4dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/border_line">
 
-        <View
-            android:id="@+id/line_programmer"
-            android:layout_width="150dp"
-            android:layout_height="1dp"
-            android:layout_gravity="center"
-            android:background="@color/blue_grey_700" />
-
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:gravity="center"
-            android:text="@string/list_laptop_programmer"
-            android:textColor="@color/blue_grey_700"
-            android:textSize="20sp" />
+            android:orientation="vertical"
+            android:padding="16dp">
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv_laptop_programmer"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal"
-            android:scrollbars="horizontal"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            tools:listitem="@layout/item_laptop_programmer" />
+            <View
+                android:id="@+id/line_programmer"
+                style="@style/productLineFontStyle" />
 
-    </LinearLayout>
+            <TextView
+                style="@style/productNameFontStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/list_laptop_programmer" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_laptop_programmer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:scrollbars="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/item_laptop_programmer" />
+
+            <View
+                android:id="@+id/line_gaming"
+                style="@style/productLineFontStyle.second" />
+
+            <TextView
+                style="@style/productNameFontStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/list_laptop_gaming" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_laptop_gaming"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:scrollbars="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/item_laptop_programmer" />
+
+            <View
+                android:id="@+id/line_recommendation"
+                style="@style/productLineFontStyle.second" />
+
+            <TextView
+                style="@style/productNameFontStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/laptop_rekomendasi_2022" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_laptop_recommendation"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_marginTop="10dp"
+                android:scrollbars="vertical"
+                tools:listitem="@layout/item_laptop_recommend" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
