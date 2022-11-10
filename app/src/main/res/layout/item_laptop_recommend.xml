@@ -5,7 +5,7 @@
     android:layout_height="wrap_content"
     android:clipToPadding="false"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="4dp">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -19,8 +19,9 @@
 
             <ImageView
                 android:id="@+id/img_item_photo"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_centerHorizontal="true"
                 android:src="@drawable/laptop_2" />
 
             <View
@@ -31,21 +32,27 @@
                 android:alpha="0.2"
                 android:background="@color/grey_400" />
 
-            <TextView
-                android:id="@+id/tv_brand"
-                style="@style/BrandFontStyle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignTop="@id/line_item"
-                android:text="@string/brand_laptop" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignTop="@+id/line_item"
+                android:orientation="vertical"
+                android:padding="4dp">
 
-            <TextView
-                android:id="@+id/tv_price"
-                style="@style/PriceFontStyle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:text="@string/price" />
+                <TextView
+                    android:id="@+id/tv_brand"
+                    style="@style/BrandFontStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/brand_laptop" />
+
+                <TextView
+                    android:id="@+id/tv_price"
+                    style="@style/PriceFontStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/price" />
+            </LinearLayout>
         </RelativeLayout>
 
     </androidx.cardview.widget.CardView>

@@ -5,7 +5,7 @@
     android:layout_height="wrap_content"
     android:clipToPadding="false"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="4dp">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -30,21 +30,26 @@
                 android:alpha="0.2"
                 android:background="@color/grey_400" />
 
-            <TextView
-                android:id="@+id/tv_brand"
-                style="@style/BrandFontStyle"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_alignTop="@id/line_item"
-                android:text="@string/brand_laptop" />
+                android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/tv_price"
-                style="@style/PriceFontStyle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:text="@string/price" />
+                <TextView
+                    android:id="@+id/tv_brand"
+                    style="@style/BrandFontStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/brand_laptop" />
+
+                <TextView
+                    android:id="@+id/tv_price"
+                    style="@style/PriceFontStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/price" />
+            </LinearLayout>
         </RelativeLayout>
 
     </androidx.cardview.widget.CardView>
